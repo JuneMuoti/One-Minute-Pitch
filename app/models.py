@@ -36,7 +36,7 @@ class Category(db.Model):
     pitches=db.relationship('Pitch',backref='category',lazy='dynamic')
 
     def save_category(self):
-        db.session.add(self):
+        db.session.add(self)
         db.session.commit()
 
     @classmethod
@@ -64,13 +64,12 @@ class Pitch(db.Model):
         db.session.commit()
 
     @classmethod
-    def get_pitches(cls,category_id)
-
-    '''
-    gets pitches of a selected category from the database
-    '''
-    pitches=Pitch.query.order_by(Pitch.id.desc()).filter_by(category_id=category_id).all()
-    return pitches
+    def get_pitches(cls,category_id):
+        '''
+        gets pitches of a selected category from the database
+        '''
+        pitches=Pitch.query.order_by(Pitch.id.desc()).filter_by(category_id=category_id).all()
+        return pitches
 
 
     

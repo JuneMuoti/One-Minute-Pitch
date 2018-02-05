@@ -1,7 +1,7 @@
 import os
 class Config:
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://june:1234@localhost/pitch'
-
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     #general configuration parent class
     pass
 

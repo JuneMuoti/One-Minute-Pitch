@@ -15,7 +15,7 @@ def index():
 @main.route('/category/new',methods=['GET','POST'])
 @login_required
 def new_category():
-    form=   CategoryForm()
+    form= CategoryForm()
     if form.validate_0n_submit():
         name=form.name.data
         new_category=Category(name=name)
