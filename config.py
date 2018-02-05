@@ -1,5 +1,6 @@
 import os
 class Config:
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://june:1234@localhost/pitch'
 
     #general configuration parent class
     pass
