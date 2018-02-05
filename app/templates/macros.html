@@ -1,0 +1,35 @@
+{% macro displayCategoryList(category_list) %}
+
+
+    {% for category in category_list %}
+        <div class="row">
+            
+            <div class="col-md-2 col-lg-2">
+                
+            </div>
+
+            <div class=" col-xs-12 col-sm-12 col-md-8 col-lg-8 well category-well">
+            
+                <li class="text-center">
+
+                    <h2 class="category-name">
+
+                        <a href="/category/{{category.id}}">
+                            {{ category.name }}   
+                        </a>
+                        
+                    </h2>
+
+                </li>
+
+            </div>
+
+            <div class="col-md-2 col-lg-2">
+                
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+{% endmacro %}

@@ -5,3 +5,61 @@
     {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Milonga');
+     h2{            display: block;
+            font-family: 'Milonga', 'Trebuchet MS', Georgia, serif;
+            color: #595a6a;
+            font-size: 4.2em;
+            margin-bottom: 5px;
+            font-weight: normal;
+            text-align: center;
+          }
+          ul {
+            font-family: 'Milonga', 'Trebuchet MS', Georgia, serif;  
+          }
+          body{
+              background-color: rgb(253, 240, 255)
+          }
+    </style>
+
+    <title> {{ title }} </title>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4 col-lg-4">
+
+                <h2 class="category-header">
+                    List of Categories
+                </h2>
+                
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+                
+            </div>
+<!-- 
+            <div class="col-md-4 col-lg-4">
+                <h2 class="category-create">
+                    <a href="/group/new">
+                        Create Category
+                    </a>
+                </h2>
+                
+            </div> -->
+
+        </div>
+
+        <hr>
+
+        <ul class="list-unstyled">
+            {{ macro.displayCategoryList(categories) }}
+        </ul>
+
+
+    </div>
+
+{% endblock %}
